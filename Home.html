@@ -1,73 +1,172 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel = "icon" type = "image/png" href="Images/favicon.png"/><title >DSTN Travel</title>
+    <title>DSTN Travel</title>
 	<link rel="stylesheet" type="text/css" href="Home.css">
-
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
 <body>
-	
+    <header>
+        <nav>
+            <div class ="header-container">
+                <a href="Home.html" class="home-button">
+                    <img src="Images/favicon.png" alt="Company Logo">
+                </a>
+                <div class="user-controls">
+                    
+                    <!--  button to open modal login form-->
+                    <button onclick="document.getElementById('id01').style.display='block'" class="login-button">Login</button>
+                    
+                    <!-- the modal -->
+                    <div id="id01" class="modal">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                        <!-- Modal Content -->
+                        <form class="modal-content animate" action="/action_page.php">
+                            <div class="imgcontainer">
+                                <img src="Images/avatar_2.png" alt="Avatar" class="avatar">
+                            </div>
+                            <div class="login-container">
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                <button type="submit">Login</button>
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label> 
+                            </div>
+
+                            <div class="cancel-container" style="background-color:#f1f1f1">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw"><a href="#"> Forgot password?</a></span>
+                            </div>
+                        </form>
+                    </div> 
+
+                        
+                    <div class="search">
+                        <input type="text" placeholder="Search ...">
+                        <a href="search.html" class="searchicon"><i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Menu</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="Book.html">Book</a>
+                        <a href="Package.html">Package</a>
+                        <a href="HotelsandSpa.html">Hotels & Spa</a>
+                        <a href="aboutUs.html">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
     <div class="mainpage">
-        <a href="login.html" class="signUpButton"> Log in</a>
-		<nav>
-            
-			<h2 class="logo"><img rel = "log" type = "image/png" src = "Images/Name.png"></h2>
-			<div class="openMenu">
-			
-			  </div>
-			  <ul class="mainMenu">
-				<li><a href="#" class="active">Home</a></li>
-                <li><a href="Book.html" >Bookings</a></li>
-				<li><a href="Package.html">Packages</a></li>
-				<li><a href="Hotels & Spa.html">Hotels & Spa</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-				 <div class="closeMenu"><i class="fa fa-times"></i></div>
-			  </ul>
-		</nav>
-        <div class ="promlogo"><h1>Dream your next tour with us</h1></div>
-        <div class ="promotion">
-        <div class="promImage"><img src="Images/Egypt1.webp"></div>
-        <div class = "news">
-            <div class="hot">
-            <p > Hot<br>Tour</p>
+        <section class="hero">
+            <img src="Images/Name.png" alt="Dream Travel" class="hero-image"/>
+            <div class="hero-content">
+                <h1>Dream Your Next Adventure</h1>
+                <p>Explore the world with us</p>
+                <a href="destinations.html" class="cta-button">Explore Destinations</a>
             </div>
-            <h2 class = "hotnews"> Egypt <br> <h5>short time deal<br></h5></h2>
-            
-            <div class = "days">
-            <p> 7 NIGHTS <br> +AIRFARE</p>
-            <p class="price">$3000</p>
+        </section>
+
+        <section class="featured-destinations">
+            <div class="destination-container">
+                <div class="destination">
+                    <img src="Images/paris.jpeg" alt="Paris, France" />
+                    <h2>Paris, France</h2>
+                    <p>Discover the romantic city of Paris.</p>
+                    <a href="destination-paris.html" class="cta-button">Learn More</a>
+                </div>
+
+                <div class="destination">
+                    <img src="Images/NewYork.jpeg" alt="New York, USA" />
+                    <h2>New York, USA</h2>
+                    <p>Explore the bustling streets of New York City.</p>
+                    <a href="destination-new-york.html" class="cta-button">Learn More</a>
+                </div>
+        
+                <div class="destination">
+                    <img src="Images/Tokyo.avif" alt="Tokyo, Japan" />
+                    <h2>Tokyo, Japan</h2>
+                    <p>Experience the vibrant culture of Tokyo.</p>
+                    <a href="destination-tokyo.html" class="cta-button">Learn More</a>
+                </div>
+
+                <div class="destination">
+                    <img src="Images/London.webp" alt="London, UK" />
+                    <h2>London, United Kingdom</h2>
+                    <p>Experience the historic charm of London.</p>
+                    <a href="destination-london.html" class="cta-button">Learn More</a>
+                </div>
+        
+                <div class="destination">
+                    <img src="Images/Sydney.jpeg" alt="Sydney, Australia" />
+                    <h2>Sydney, Australia</h2>
+                    <p>Discover the beauty of Sydney's beaches and landmarks.</p>
+                    <a href="destination-sydney.html" class="cta-button">Learn More</a>
+                </div>
+
+                <div class="destination">
+                    <img src="Images/Rome.avif" alt="Rome, Italy" />
+                    <h2>Rome, Italy</h2>
+                    <p>Explore the ancient history and culture of Rome.</p>
+                    <a href="destination-rome.html" class="cta-button">Learn More</a>
+                </div>
+        
+                <div class="destination">
+                    <img src="Images/RiodeJaneiro.jpeg" alt="Rio de Janeiro, Brazil" />
+                    <h2>Rio de Janeiro, Brazil</h2>
+                    <p>Enjoy the vibrant atmosphere of Rio de Janeiro's beaches and nightlife.</p>
+                    <a href="destination-rio.html" class="cta-button">Learn More</a>
+                </div>
+                <!-- Repeat for other destinations -->
             </div>
-            <a href="Book.html" class="bookButton">BOOK NOW</a></div>
+        </section>
 
-
-
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="testimonial">
+                <p>"The best travel agency I've ever used!"</p>
+                <cite>Andres Manuel</cite>
             </div>
+            <!-- Repeat for other testimonials -->
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-signup">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Stay updated with the latest travel deals and tips.</p>
+            <form action="subscribe.php" method="post">
+                <input type="email" name="email" placeholder="Your email" required />
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+    </div>
+    <!-- ------Contact us--------- -->
+    <footer class="footer">
+        <p>Contact US we are next to you</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
         </div>
-    <div class = "search">
-      <input  type="search" placeholder="Enter your destination ...">
-      <a href="search.html" class="searchicon"><i class="fas fa-search"></i></a>
-    </div>
-    </div>
-	<!------Contact us--------->
-    <div class="footer">
-	<footer >
-		<p>Contact US we are next to you </p>
-		<div class="social">
-			<a href="#"><i class="fab fa-instagram"></i></a>
-			<a href="#"><i class="fab fa-twitter"></i></a>
-			<a href="#"><i class="fab fa-facebook-f"></i></a>
-		</div>
-		<p class="end">Copy right @ ...</p>
-	</footer>
-</div>
-</body>
-<script src="Home.js"></script>
+        <p class="end">Copyright &copy; DSTN Travel</p>
+    </footer>
 
+<script src="Home.js"></script>
+</body>
 </html>
 
 	

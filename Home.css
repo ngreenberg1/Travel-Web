@@ -1,321 +1,348 @@
+/* Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-@import url("https://fonts.googleapis.com/css2?family-Poppins");
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
 
-*{
-	padding: 0;
-	margin: 0;
-	font-family: 'Josefin Sans', sans-serif;
-	box-sizing: border-box;
+/* Defin custom CSS variables for color palette */
+:root {
+    --lavender-blush: #f1e4ed;
+    --ultra-violet: #4e5283;
+    --picton-blue: #1da4ed;
+    --gold-metallic: #e1bd51;
+    --charcoal: #2e4057;
 }
-.main{
+
+/*Styles for the header container */
+.header-container {
+	display: flex; /*Use flexbox for layout*/
+	justify-content: space-between; /*space between items */
+	align-items: center; /*Vertically align items */
+}
+
+.header-container .home-button img{
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	width: 1130px;
-	max-width: 95%;
-	margin: 0 auto;
-
-}
-.mainpage{
-	height: 100vh;
-	width: 100%;
-	background-position: center;
-	background-image: url(Images/background.jpg);
-	background-size:contain;
-}
-.mainpage::before{
-	content: '';
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 100px;
-	background: linear-gradient(to top, #183b6c, transparent);
-	z-index: 1000;
-}
-.mainpage::after{
-	content: '';
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 100px;
-	background: linear-gradient(to top, #183b6c, transparent);
-	z-index: 1000;
-}
-nav{
-	padding-top: 45px;
-	padding-left: 3%;
-	padding-right: 3%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-span{
-	color: rgb(255, 255, 255);
-}
-nav ul li{
-	padding: 6px  20px 6px 20px;
-	list-style-type: none;
-    display:inline ;
-    
-   
-}
-nav ul li a{
-    padding: 6px  15px 6px 15px;
-	color: white;
-	font-weight: bold;
-	text-decoration: none;
-	text-transform: capitalize;
-    border-right: solid black;
-    text-align: left;
-    
-}
-nav ul li a:hover,
-nav ul li a.active{
-	color: rgb(230, 210, 33);
-	transition: .4s;
-    transform: scale(1,1);
-    
-}
-nav img{
-    margin-top: 0px;
-	width: 180px;
-	height: 80px;
-	visibility:visible;
-}
-nav .openMenu{
-	display: none;
-}
-nav .closeMenu{
-	display: none;
-}
-
-.signUpButton{
-	margin-top :10px;
-	margin-right: 10px;
-	padding-top: 20px;
-	font-size: small;
-	top: -5px;
-	float:right;
-	padding: 10px 25px;
-	background-color: rgb(230, 210, 33);
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	transition: transform .4s;
-	border:  solid transparent;
-}
-.signUpButton:hover{
-	transform: scale(1.1);
-}
-.promlogo h1{
-    margin-top: 40px;
-    color:white ;
-    font-style: italic;
-    text-align: center;
-    font-size: x-large;
-
-}
-.promotion{
-    position: sticky;
-}
-.news {
-    position: absolute;
-    border-left-style: dashed;
-    border-color:rgb(230, 210, 33); 
-    top: 40px;
-    color:white;
-    background-color: #183b6c;
-    background-size:cover;
-    padding: 45px 60px 45px 60px;
-    margin-left: 40%;
-    margin-right: 40%;
-    
-    
-    
-}
-
-.promotion img{
-    position: absolute;
-    top: 40px;
-    margin-left: 20%;
-    width: 290px;
-    height: 260px;
-    border-right-style: dashed;
-    border-color:rgb(230, 210, 33);
-}
-.hot p{
- color:white;
-  margin-left: 160px;
-  margin-top: -30px;
-  padding: 10px 15px 10px 15px;
-  background-color: rgb(255, 106, 0);
-  border-radius: 50%;
-  
-  font-size:small;
-  text-align:center;
-  
-}
-.news a{
-    
-	margin-right: 10px;
-	margin-top: 30px;
-	font-size: small;
-	
-	float:left;
-	padding: 10px 10px;
-	background-color: rgb(230, 210, 33);
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	transition: transform .4s;
-	border:  solid transparent;
-}
-.bookButton:hover{
-	transform: scale(1.1);
-}
-.days p{
-    
-    border-style:groove;
-    font-size:small;
-    background-color:rgb(141, 141, 185);
-    align-items:flex-end;
-    text-align: center;
-    margin-left: 55%;
-    margin-right: 5%;
-    margin-top: -70x;
-    }
-.days p.price{
-    background-color: rgb(255, 106, 0);
-    text-align: center;
-}
-
-.fa-search {
- color:white;
- top: 530px;
- position: absolute;
-  margin-left: 56.8%;
-  padding: 9px 20px 9px 20px;
-  background-color: rgb(230, 210, 33);
-  border: 3px;
-  transition: transform .4s;
-}
-.searchicon:hover{
-    transform:scale(1.1);
-}
-
-.search input{
- position:absolute;
-
- top: 530px;
-  margin-left: 35%;
-  width: 320px;
-  border: 3px solid rgb(230, 210, 33);
- 
-  padding: 9px 20px 9px 40px;
-}
-
-
-.content{
-	transform: translateY(-50%);
-	position: absolute;
-	top: 50%;
-	left:8%;
-
-}
-
-.title h2{
-	color: white;
-	font-size: 75px;
-	width: 1130px;
-	margin: 30px auto;
-	text-align: center;
-}
-
-.contact-us
-{
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-	height: 290px;
-	background: #183b6c,transparent;
-	display: flex;
-
-}
-.contact-us
-p{
-	color: white;
-	font-size: 30px;
-	font-weight: bold;
-	margin-bottom: 25px;
-}
-.contact-us
-.button-two{
-	background-color:  rgb(230, 210, 33);;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 13px 30px;
-	border-radius: 30px;
-	transition: .4s;
-	color: white;
-	text-decoration: none;
-
-}
-.contact-us
-.button-two:hover{
-	border: 2px solid rgb(90, 50, 168);
-	background-color: rgb(230, 210, 33);
-	cursor: pointer;
-}
-footer{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	width: 100%;
-	height: 400px;
-	background: #183b6c;
-
-}
-footer p:nth-child(1){
-	margin-bottom: 20px;
-	font-weight: bold;
-	font-size: 30px;
-	color: white;
-}
-footer p:nth-child(2){
-	color: white;
-	font-size: 17px;
-	text-align: center;
-	width: 500px;
-	line-height: 26px;
-}
-.social{
-	display: flex;
-}
-.social a{
-	background:  #183b6c;
-	border-radius: 50%;
-	margin: 22px 10px;
-	color: white;
-	text-decoration: none;
-	font-size: 20px;
 	width: 45px;
-	height: 45px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	height: auto;
+	margin-right: 10px;
+	border-radius: 5px; /* Adding styles to the home button with an image */
+
 }
-.social a:hover{
-	transform: scale(1.4);
-	transition: .3s;
+
+/*styles for user controls */
+.user-controls {
+	display: flex; /*Display user controls in a row */
+	align-items: center; /*Vertically align items */
 }
-.end{
+
+.login-button {
+    background-color: var(--charcoal); /* Use your color variable */
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search {
+    background-color: #E1BD51; /* Gold (metallic) from your palette */
+    padding: 10px;
+    border-radius: 5px;
+	max-width: 300px;
+	margin: 10px;
+}
+
+.search input[type="text"] {
+    border: none;
+    background-color: transparent;
+	width: 85%;
+	flex: 1;
+}
+
+.user-controls .menu-icon {
+	margin-left: 10px; /* Add margin to the menu icon */
+}
+
+/*Styles for dropdown button */
+.dropbtn {
+	background-color: var(--charcoal);
+	color: white;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	background-color: lightslategrey; /*Change background color on hover/focus */
+}
+
+/* Styles for dropdown menu */
+.dropdown {
+	position: relative;
+	display: inline-block; /*Display the dropdown inline with other content */
+}
+
+.dropdown-content {
+	display: none; /* Initially hid the dropdown menu */
 	position: absolute;
-	color:	 white;
-	bottom: 35px;
-	font-size: 14px; 
+	right: 0;
+	background-color: white;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add box shadow*/
+	z-index: 2; /*Ensure it's above other elements */
+
 }
+
+.dropdown-content a {
+	color:black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/*Change background color on hover*/
+.dropdown-content a:hover {background-color: #ddd;}
+
+.show {display:block;} /*Display the dropdown when the "show" class is applied */
+
+
+/*Main container styles */
+.main-container {
+    display: flex;
+    flex-wrap: wrap; /*Wrap content to the next row when necessary */
+    justify-content: space-between; /* Adjust as needed */
+	max-width: 1200px; /* Limit the maximum width of the content*/
+    margin: 0 auto; /* Center content on the page */
+}
+
+/* Body background color */
+body {
+	background-color: var(--lavender-blush);
+}
+
+/* Section styles */
+.section {
+    flex: 1; /* Equal width for sections */
+    margin: 10px; /* Adjust margins as needed for spacing */
+}
+
+/* Grid container styles */
+.grid-container {
+    display: grid; /*Use CSS grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid with minimum width */
+    gap: 20px; /* Add gap between grid items */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    /* CSS rules for smaller screens */
+}
+
+@media (max-width: 480px) {
+    /* CSS rules for even smaller screens */
+}
+
+/* Additional section styles */
+.section {
+    padding: 20px; /* Add padding to sections for content spacing */
+}
+
+/* Element styles */
+.element {
+    margin: 10px; /* Adjust margins for spacing between elements */
+}
+
+/*Box sizing for consistent sizing of elements */
+* {
+    box-sizing: border-box;
+}
+
+/*Media query for smaller screens */
+@media (max-width: 768px) {
+    #mainMenu {
+        display: block; /*Display the main menu for smaller screens */
+    }
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url("Images/hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: var(--ultra-violet);
+    text-align: center;
+    padding: 100px 0;
+	position: relative;
+}
+
+.hero-image {
+	max-width: 100%; /* Make the hero image responsive */
+	height: auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem; 
+}
+
+/* Featured Destinations Styles */
+.featured-destinations {
+    display: flex; /* Display destinations in a row */
+    justify-content: space-between; 
+    margin: 40px 0; 
+	overflow: hidden; /* Hide overflow */
+}
+
+.destination-container {
+	display: flex; /* Display destination containers in a row */
+	overflow-x: auto; /* Enable horizontal scrolling */
+	width: 100%;
+}
+
+.destination {
+    flex: 0 0 calc(33.333% - 20px);/* Adjust the width of each destination */
+    padding: 20px;/* Add padding to each destination*/
+    background-color: var(--charcoal); 
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners */
+	width: 300px;
+	margin-right: 2px; /* Margin between destinations*/
+}
+
+.destination img {
+    width: 100%; /*Make destination images responsive */
+    border-radius: 10px;
+}
+
+.cta-button {
+    background-color: var(--picton-blue); /* This uses the previously defined color variable */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+	background-color: var(--gold-metallic);
+	margin: 5px auto; /* 15% from the top and centered */
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  }
+
+  .avatar {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 20px;
+	display: block;
+  }
+
+  .login-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	margin:20px 0;
+	background-color: var(--ultra-violet)
+  }
+
+  .login-container label {
+	margin-top: 20px;
+	color: white;
+
+  }
+
+  .login-container button {
+	margin-top: 20px;
+  }
+
+  
+  /* The Close Button */
+  .close {
+	/* Position it in the top right corner outside of the modal */
+	position: absolute;
+	right: 25px;
+	top: 0; 
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+	color: red;
+	cursor: pointer;
+  }
+
+  .cancel-container {
+	background-color: var(--lavender-blush);
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	margin-top: 20px;
+  }
+
+  button.cancelbtn {
+	background-color: var(--ultra-violet);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 14px;
+	cursor: pointer;
+  }
+
+  .psw a {
+	margin-left:20px;
+	color:#000
+
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)} 
+	to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+	from {transform: scale(0)} 
+	to {transform: scale(1)}
+  }
